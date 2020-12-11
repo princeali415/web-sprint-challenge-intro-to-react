@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 function Characterdetails(props){
-    const {close, info, currentcharId} = props
+    const { info } = props
     
 
     return (

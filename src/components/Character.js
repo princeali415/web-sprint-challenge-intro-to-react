@@ -25,18 +25,19 @@ export default function Character(props){
             <div className='img-container'>
                 <img src={char.image} alt='profile-pic'></img>
             </div>
-            <h3>{char.name}</h3>
-            <div className='main-info'>
-                {
-                    charId === null ?
-                    <button onClick={() => open(char.id)}>Details</button>
-                    :
-                    <button onClick={() => close(char.id)}>Close</button>
-                }
-                {
-                    charId === char.id && <Characterdetails info={info} currentCharId={char.id}/>
-                }
-                
+            <div className='info-container'>
+                <h3>{char.name}</h3>
+                <div className='main-info'>
+                    {
+                        charId === null ?
+                        <button onClick={() => open(char.id)}>Details</button>
+                        :
+                        <button onClick={() => close(char.id)}>Close</button>
+                    }
+                    {
+                        charId === char.id && <Characterdetails info={info} currentCharId={char.id}/>
+                    }
+                </div>    
                 
             </div>
         </div>
