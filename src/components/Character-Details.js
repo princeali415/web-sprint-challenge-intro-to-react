@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import Character from './components/Character.js'
-import styled from 'styled-components'
-// Write your Character component here
+import React from 'react'
 
-export default function CharacterDetails(props){
-    const {close, info} = props
+import styled from 'styled-components'
+
+
+function Characterdetails(props){
+    const {close, info, currentcharId} = props
     
 
     return (
@@ -23,3 +23,5 @@ export default function CharacterDetails(props){
       </>
       )
     }
+
+  export default Characterdetails
