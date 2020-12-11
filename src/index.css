@@ -26,24 +26,6 @@ body {
   border-radius: 50%;
 }
 
-.main-info button {
-  background-color: rgb(79, 96, 98);
-  font-size: 20px;
-  border: solid 2px white;
-  border-radius: 25px;
-  font-size: 1.3rem;
-  padding: 2% 5%;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-  transition: 1s all ease-in-out
-
-}
-
-button :hover, :focus {
-  background-color: scale-color(rgb(55, 68, 70));
-  transition: 1s all ease-in-out
-}
 
 .info-container {
   align-self: start;

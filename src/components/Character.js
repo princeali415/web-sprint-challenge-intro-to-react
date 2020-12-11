@@ -4,6 +4,26 @@ import styled from 'styled-components'
 import  Characterdetails  from './Character-Details.js'
 // Write your Character component here
 
+const ButtonStyled = styled.button`
+    background-color: rgb(79, 96, 98);
+    font-size: 20px;
+    border: solid 2px rgb(44, 44, 44);
+    border-radius: 25px;
+    font-size: 1.3rem;
+    padding: 2% 5%;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(113, 126, 128);
+    transform: scale(1.05);
+  }
+
+`
+
 export default function Character(props){
     const {char, charId, open, close} = props
 
@@ -30,9 +50,9 @@ export default function Character(props){
                 <div className='main-info'>
                     {
                         charId === null ?
-                        <button onClick={() => open(char.id)}>Details</button>
+                        <ButtonStyled onClick={() => open(char.id)}>Details</ButtonStyled>
                         :
-                        <button onClick={() => close(char.id)}>Close</button>
+                        <ButtonStyled onClick={() => close(char.id)}>Close</ButtonStyled>
                     }
                     {
                         charId === char.id && <Characterdetails info={info} currentCharId={char.id}/>
