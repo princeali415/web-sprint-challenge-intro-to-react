@@ -15,7 +15,7 @@ const ButtonStyled = styled.button`
     border-radius: 8px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease-in-out;
-
+    color: whitesmoke;
     &:hover {
     transition: all 0.3s ease-in-out;
     background-color: rgb(113, 126, 128);

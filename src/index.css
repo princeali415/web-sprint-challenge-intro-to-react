@@ -4,10 +4,11 @@ body {
   font-family: sans-serif;
   background-image: url('./images/rm-bg.jpg');
   background-size: auto;
+  color: whitesmoke;
 }
 
 .characters-container {
-  border:solid;
+  border:solid 3px black;
   border-radius: 25px;
   padding: 5%;
   margin-bottom: 5%;
@@ -22,7 +23,7 @@ body {
 }
 
 .characters-container img {
-  border: solid #1a3e46db;
+  border: solid 2px #1a3e46db;
   border-radius: 50%;
 }
 
