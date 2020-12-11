@@ -22,8 +22,10 @@ export default function Character(props){
 
     return (
         <div className='characters-container' key={char.id}>
-            <img src={char.image} alt='profile-pic'></img>
-            <h3>Name: {char.name} </h3>
+            <div className='img-container'>
+                <img src={char.image} alt='profile-pic'></img>
+            </div>
+            <h3>{char.name}</h3>
             <div className='main-info'>
                 {
                     charId === null ?

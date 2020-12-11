@@ -6,6 +6,25 @@ body {
   background-size: auto;
 }
 
+.characters-container {
+  border:solid;
+  border-radius: 25px;
+  padding: 5%;
+  margin-bottom: 5%;
+  width: 70%;
+  align-items: center;
+  display: inline-flex;
+  background: #ffffff;
+}
+
+.characters-container h3 {
+  margin-left: 5%;
+}
+
+.characters-container .main-info {
+  margin-left: 5%;
+}
+
 @media (max-width: 750px){
   body{
   margin: 0;
