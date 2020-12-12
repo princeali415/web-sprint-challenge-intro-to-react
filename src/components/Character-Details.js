@@ -19,6 +19,9 @@ const ButtonStyled = styled.button`
     background-color: rgb(113, 126, 128);
     transform: scale(1.05);
   }
+  @media (max-width: 750px){
+    font-size: 15px
+  }
 
 `
 

@@ -19,7 +19,7 @@ body {
 }
 
 .characters-container h3{
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .characters-container img {
@@ -41,5 +41,20 @@ body {
   font-family: sans-serif;
   background-image: url('./images/rm-img-2.png');
   background-size: auto;
+  font-size: 0.8rem;
+  }
+  img {
+    width: 12em;
+  }
+  .characters-container {
+    background-color: rgba(0, 0, 0, 0.698);
+    border: solid 2px #d1d1d1db;
+  }
+  .characters-container h3{
+    font-size: 1.7rem;
+  }
+  .characters-container img {
+    border: solid 2px #d1d1d1db;
+    
   }
 }
