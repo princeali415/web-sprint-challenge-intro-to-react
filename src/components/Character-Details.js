@@ -33,7 +33,7 @@ function Characterdetails(props){
 
     return (
       <div>
-        <ButtonStyled onClick={Toggle}> {toggleB ? "Show Details" : "Hide Details"}</ButtonStyled>
+        <ButtonStyled onClick={Toggle}> {toggleB ? "Hide Details" : "Show Details"}</ButtonStyled>
           {
               toggleB && <ul id='details'>
                   
