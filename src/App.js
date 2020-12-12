@@ -9,7 +9,8 @@ const App = () => {
   // the state properties here.
 
   const [char, setChar] = useState([])
-  const [charId, setCharId] = useState(null)
+  
+
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -18,6 +19,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://rickandmortyapi.com/api/character')
     .then(res => {
+      console.log(res.data.results)
       setChar(res.data.results)
     })
     .catch(err => {
@@ -26,20 +28,12 @@ const App = () => {
   }, [])
 
 
-  const openCard = id => {
-    setCharId(id)
-  }
-
-  const closeCard = () => {
-    setCharId(null)
-  }
-
   return (
     <div className="App">
       <h1 className="Header">Rick & Morty Characters</h1>
       {
         char.map( c => {
-        return  <Character key={c.id} char={c} charId={charId} open={openCard} close={closeCard}></Character>
+        return  <Character key={c.id} char={c} ></Character>
         })
       
       }

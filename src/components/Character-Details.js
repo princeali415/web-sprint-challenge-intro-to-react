@@ -1,26 +1,49 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import styled from 'styled-components'
+
+const ButtonStyled = styled.button`
+    background-color: rgb(79, 96, 98);
+    font-size: 20px;
+    border: solid 2px rgb(44, 44, 44);
+    border-radius: 25px;
+    font-size: 1.3rem;
+    padding: 2% 5%;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease-in-out;
+    color: whitesmoke;
+    &:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(113, 126, 128);
+    transform: scale(1.05);
+  }
+
+`
 
 
 function Characterdetails(props){
     const { info } = props
-    
+    const [toggleB, setToggleB]= useState(false)
+
+    const Toggle = () => {
+      setToggleB(!toggleB)
+    }
 
     return (
-      <>
-      {
-          info &&
-          <div>
-              <ul>
-                  <p>ID: {info.id}</p>
-                  <p>SPECIES: {info.species}</p>
-                  <p>GENDER: {info.gender}</p>
-                  <p>STATUS: {info.status}</p>
+      <div>
+        <ButtonStyled onClick={Toggle}> {toggleB ? "Show Details" : "Hide Details"}</ButtonStyled>
+          {
+              toggleB && <ul id='details'>
+                  
+                  <p><b>SPECIES:</b> {info.species}</p>
+                  <p><b>GENDER:</b> {info.gender}</p>
+                  <p><b>STATUS:</b> {info.status}</p>
               </ul>
-          </div>
-      }
-      </>
+          }   
+      
+     </div>
       )
     }
 
